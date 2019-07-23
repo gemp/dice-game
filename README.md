@@ -45,8 +45,8 @@ the test file.
 
 Run the tests from the exercise directory using the following command:
 
-    ruby dice_score_test.rb
+    ruby dice_game_test.rb
 
 To include color from the command line:
 
-    ruby -r minitest/pride dice_score_test.rb
+    ruby -r minitest/pride dice_game_test.rb
