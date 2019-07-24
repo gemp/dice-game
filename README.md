@@ -1,6 +1,8 @@
 # Greed Dice Game
 
-> Solutions to the `about_scoring_project.rb` of the [Ruby Koans](http://www.rubykoans.com)
+> Personal solutions to the `about_scoring_project.rb` of the [Ruby Koans](http://www.rubykoans.com)    
+> Just trying to solve it with many starting points and as short as possible, for fun.    
+> They're in the order I made them except _The Descriptive Way_ which was the last one.
 
 Greed is a dice game where you roll up to five dice to accumulate points. 
 The `score()` function will be used to calculate the score of a single roll of the dice.
@@ -29,21 +31,7 @@ Your goal is to write the score method.
 
 * * * *
 
-> Note: the following are instructions given by [Exercism](http://exercism.io).
-
-For installation and learning resources, refer to the
-[Ruby resources page](http://exercism.io/languages/ruby/resources).
-
-For running the tests provided, you will need the Minitest gem. Open a
-terminal window and run the following command to install minitest:
-
-    gem install minitest
-
-If you would like color output, you can `require 'minitest/pride'` in
-the test file, or note the alternative instruction, below, for running
-the test file.
-
-Run the tests from the exercise directory using the following command:
+For running the tests provided, you will need the Minitest gem.
 
     ruby dice_game_test.rb
 
