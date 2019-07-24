@@ -1,6 +1,8 @@
 class Greed
 
   def self.score(roll)
+    validate!(roll)
+
     with_descriptive(roll)
     # with_string(roll)
     # with_array(roll)
@@ -113,6 +115,14 @@ private
       trio, score = val*100, score-3 if score >= 3 # love that
       sum + trio.to_i + score*50*[0,5,10].index(val).to_i
     end
+  end
+
+
+  def self.validate!(roll)
+    # most solutions will not work with more than 5 numbers
+    error = "Must be an array of at most 5 integers between 1 and 6"
+    valid = roll.is_a?(Array) && roll.size <= 5 && roll.all? { |n| (1..6).include? n }
+    raise ArgumentError, error unless valid
   end
 
 end

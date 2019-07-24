@@ -43,4 +43,34 @@ class DiceGameTest < Minitest::Test
     assert_equal 1150, Greed.score([1,1,1,5,1])
   end
 
+  def test_roll_sould_be_an_array
+    assert_raises(ArgumentError) do
+      Greed.score('a')
+    end
+  end
+
+  def test_roll_lenght_is_less_than_6
+    assert_raises(ArgumentError) do
+      Greed.score([1,2,3,4,5,6])
+    end
+  end
+
+  def test_roll_has_only_numbers
+    assert_raises(ArgumentError) do
+      Greed.score([1,'a'])
+    end
+  end
+
+  def test_roll_numbers_are_less_than_7
+    assert_raises(ArgumentError) do
+      Greed.score([7])
+    end
+  end
+
+  def test_roll_numbers_are_positive
+    assert_raises(ArgumentError) do
+      Greed.score([0])
+    end
+  end
+
 end
